@@ -6,4 +6,5 @@ open module oinarria {
   requires javafx.controls;
 
   exports ehu.isad;
+
 }
