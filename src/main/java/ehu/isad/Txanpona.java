@@ -6,15 +6,13 @@ import java.sql.Date;
 
 public class Txanpona {
     private int id;
-
-
-    private String txanpon;
+    private String mota;
     private Date noiz;
     private Double zenbat;
     private Double bolumena;
     private Image portaera;
 
-    public Txanpona(Integer id, Date noiz, Double zenbat, Double bolumena, Image portaera) {
+    public Txanpona(Integer id, String mota, Date noiz, Double zenbat, Double bolumena, Image portaera) {
     }
 
 
@@ -26,12 +24,12 @@ public class Txanpona {
         this.id = id;
     }
 
-    public String getTxanpon() {
-        return txanpon;
+    public String getMota() {
+        return mota;
     }
 
-    public void setTxanpon(String txanpon) {
-        this.txanpon = txanpon;
+    public void setMota(String mota) {
+        this.mota = mota;
     }
 
     public Date getNoiz() {
@@ -68,7 +66,7 @@ public class Txanpona {
     @Override
     public String toString() {
         return "Txanpona{" +
-                "txanpon='" + txanpon + '\'' +
+                "mota='" + mota + '\'' +
                 ", noiz=" + noiz +
                 ", portaera=" + portaera +
                 '}';

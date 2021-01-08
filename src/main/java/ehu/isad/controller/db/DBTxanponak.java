@@ -20,20 +20,19 @@ public class DBTxanponak {
     }
     public List<Txanpona> getTxanpona(){
         List<Txanpona> emaitza = new ArrayList<>();
-        String query = "select id , txanpon, noiz, zenbat, bolumena, portaera FROM txanponak;";
+        String query = "select id, data, balioa, mota, bolumena FROM txanponak;";
         ResultSet rs = DBKudeatzaile.getInstantzia().execSQL(query);
         try{
             while (rs.next()){
                 Integer id = rs.getInt("id");
-                String txanpon = rs.getString("txanpon");
-                Date noiz = rs.getDate("noiz");
-                Double zenbat = rs.getDouble("zenbat");
+                Date data = rs.getDate("data");
+                Double balioa = rs.getDouble("balioa");
+                String mota = rs.getString("mota");
                 Double bolumena = rs.getDouble("bolumena");
-                String portaera = rs.getString("portaera");
 
 
-                Image portaeraf = this.getImage(portaera);
-                Txanpona aktual = new Txanpona(id, noiz, zenbat, bolumena, portaeraf);
+                Image portaeraf = this.getImage(portaera);//Horrela jarri beharrean parametro gabe jarri eta metodo batek lortzea
+                Txanpona aktual = new Txanpona(id, mota, data, balioa, bolumena, portaeraf);
                 emaitza.add(aktual);
             }
         } catch (SQLException throwables) {

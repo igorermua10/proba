@@ -1,5 +1,5 @@
 package ehu.isad;
-
+import ehu.isad.controller.ui.Mainkud;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,7 +14,7 @@ public class Main extends Application {
 
     private Stage stage;
 
-    private Object mainkud;
+    private Mainkud mainkud;
     @Override
 
 
